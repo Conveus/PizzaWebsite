@@ -5,9 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Menu</title>
+    <title>Menu | Back to the Pizza</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="basket.html">Basket</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <article>
+
+            <h1>Pizzas</h1>
+
+            <section class="columns-desktop">
+
+                <div class="pizza">
+                    <img src="" alt="Image">
+                    <div class="columns">
+                        <div class="title">50/50</div>
+                        <div class="price">Price</div>
+                        <select name="base" id="base">
+                            <option value="" selected>[ Select Base ]</option>
+                            <option value="thin-italian" >Thin Italian Base</option>
+                            <option value="stone-crust" >Stone Crust Base</option>
+                            <option value="cheese-stuffed" >Cheese Stuffed Crust Base</option>
+                            <option value="vegan" >Vegan Base</option>
+                            <option value="gluten-free" >Gluten Free Base</option>
+                        </select>
+                        <select name="topping1" id="topping1">
+                            <option value="" selected>[ Select Topping ]</option>
+                        </select>
+                        <select name="topping2" id="topping2">
+                            <option value="" selected>[ Select Topping ]</option>
+                        </select>
+                        <select name="size" id="size">
+                            <option value="small" >Small - 8"</option>
+                            <option value="medium" selected>Medium - 12"</option>
+                            <option value="large" >Large - 16"</option>
+                            <option value="pizzanormous" >Pizzanourmous - 20"</option>
+                        </select>
+                    </div>
+                    <p class="desc">Choose one base and two toppings. Perfect for sharing!</p>
+                    <button data-order="pizza">Add to Cart</button>
+                </div>
+    
+                <div class="pizza">
+                    <img src="" alt="Image">
+                    <div class="columns">
+                        <div class="title">Name</div>
+                        <div class="price">Price</div>
+                        <select name="base" id="base">
+                            <option value="" selected>[ Select Base ]</option>
+                            <option value="thin-italian" >Thin Italian Base</option>
+                            <option value="stone-crust" >Stone Crust Base</option>
+                            <option value="cheese-stuffed" >Cheese Stuffed Crust Base</option>
+                            <option value="vegan" >Vegan Base</option>
+                            <option value="gluten-free" >Gluten Free Base</option>
+                        </select>
+                        <select name="size" id="size">
+                            <option value="small" >Small - 8"</option>
+                            <option value="medium" selected>Medium - 12"</option>
+                            <option value="large" >Large - 16"</option>
+                            <option value="pizzanormous" >Pizzanourmous - 20"</option>
+                        </select>
+                    </div>
+                    <p class="desc">Description</p>
+                    <button data-order="pizza">Add to Cart</button>
+                </div>
+
+            </section>
+
+            <h3>Vegan</h3>
+
+                <section class="columns-desktop">
+
+                </section>
+
+            <h3>Glueten Free</h3>
+
+            <section class="columns-desktop">
+                    
+            </section>
+
+            <h1>Sides</h1>
+
+            <section class="columns-desktop">
+                <div class="side">
+                    <img src="" alt="Image">
+                    <div class="columns">
+                        <div class="title">Name</div>
+                        <div class="price">Price</div>
+                        <div class="desc">Description</div>
+                        <select name="quantity" id="quantity">
+                            <option value="1" selected>1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10" >10</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <h1>Drinks</h1>
+
+            <section class="columns-desktop">
+                <div class="drink">
+                    <img src="" alt="Image">
+                    <div class="columns">
+                        <div class="title">Name</div>
+                        <div class="price">Price</div>
+                        <select name="quantity" id="quantity">
+                            <option value="1" selected>1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10" >10</option>
+                        </select>
+                    </div>
+                </div> 
+            </section>
+
+        </article>
+
+    </main>
     
 </body>
 </html>
