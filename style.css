@@ -25,6 +25,8 @@ header{
 
 header>img{
     text-align: left;
+    max-width: 50%;
+    max-height: 50%;
 }
 
 nav a:visited,
@@ -55,6 +57,11 @@ main{
     min-height: 85%;
 }
 
+article{
+    padding: 2em;
+    width: 75%;
+}
+
 .columns{
     display: flex;
 }
@@ -62,15 +69,46 @@ main{
 /* Desktop */
 
 @media only screen and (min-width: 768px){
-    main{
-        display: flex;
-    }
-
-    aside{
-        margin-left: 2%;
-    }
 
     .columns-desktop{
         display: flex;
     }
+}
+
+/* Pizzas */
+
+.pizza{
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #6eb0da;
+    border: solid 1px gray;
+}
+
+.pizza img{
+    width: 100%;
+}
+
+.pizza .title{
+    font-weight: bold;
+}
+
+.pizza .columns{
+    width: 100%;
+}
+
+.pizza .price{
+    text-align: right;
+}
+
+.pizza .columns div{
+    width: 50%;
+}
+
+.pizza button{
+    background-color: #d12e2e;
+    padding: 10px;
+    border: solid 1px #20488f;
+    border-radius: 3px;
+    color: white;
 }
