@@ -24,8 +24,7 @@ header{
 }
 
 .logo {
-    width: 20%;
-    max-width: 200px;
+    width: 200px;
     margin-bottom: 10px;
 }
 
@@ -76,42 +75,40 @@ article{
     .columns-desktop{
         display: flex;
     }
-
-    main{
-    }
 }
 
 /* Pizzas */
 
-.pizza{
-    width: 400px;
+.item{
+    width: 300px;
     padding: 10px;
     margin: 10px;
     background-color: #6eb0da;
     border: solid 1px gray;
 }
 
-.pizza img{
+.item img{
     width: 100%;
+    max-height: 250px;
 }
 
-.pizza .title{
+.item .title{
     font-weight: bold;
 }
 
-.pizza .columns{
+.item .columns{
     width: 100%;
 }
 
-.pizza .price{
+.item .price{
     text-align: right;
 }
 
-.pizza .columns div{
+.item .columns div{
     width: 50%;
 }
 
-.pizza button{
+.item button{
     background-color: #d12e2e;
     padding: 10px;
     border: solid 1px #20488f;
