@@ -20,19 +20,21 @@ header{
     width: 100%;
     background-color: #232853;
     padding: 10px;
-    text-align: center;
 }
 
-header>img{
+.logo {
+    width: 20%;
     text-align: left;
-    max-width: 50%;
-    max-height: 50%;
 }
 
 nav a:visited,
 nav a:link{
     color: #fff;
     text-decoration: none;
+}
+
+nav{
+    text-align: center;
 }
 
 nav>ul{
