@@ -102,6 +102,7 @@ article h1, h3{
 
 .item .columns{
     width: 100%;
+    margin-bottom: 5px;
 }
 
 .item .price{
@@ -109,14 +110,16 @@ article h1, h3{
 }
 
 .item .topping2{
-    margin-right: 10px;
+   margin-left: 45px;
 }
 
 .item .columns div{
     width: 50%;
 }
 
-
+.item p{
+    margin-bottom: 5px;
+}
 
 .item button{
     background-color: #d12e2e;
@@ -124,5 +127,4 @@ article h1, h3{
     border: solid 1px #20488f;
     border-radius: 3px;
     color: white;
-
 }
