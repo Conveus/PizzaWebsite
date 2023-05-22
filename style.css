@@ -64,6 +64,10 @@ article{
     width: 75%;
 }
 
+article h1, h3{
+    color: #fff;
+}
+
 .columns{
     display: flex;
 }
@@ -77,14 +81,14 @@ article{
     }
 }
 
-/* Pizzas */
+/* Items */
 
 .item{
     width: 300px;
     padding: 10px;
     margin: 10px;
     background-color: #6eb0da;
-    border: solid 1px gray;
+    border: solid 2px #232853;
 }
 
 .item img{
@@ -104,9 +108,15 @@ article{
     text-align: right;
 }
 
+.item .topping2{
+    margin-right: 10px;
+}
+
 .item .columns div{
     width: 50%;
 }
+
+
 
 .item button{
     background-color: #d12e2e;
@@ -114,4 +124,5 @@ article{
     border: solid 1px #20488f;
     border-radius: 3px;
     color: white;
+
 }
