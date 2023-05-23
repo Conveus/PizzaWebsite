@@ -32,14 +32,61 @@ pizzaArray.forEach(function(pizzaItem, index){
    pizzaCol1.appendChild(pizzaPrice)
    pizzaPanel.appendChild(pizzaCol1)
 
-   // Second column, Base and Size
+   // Second column
    let pizzaCol2 = document.createElement("div")
    pizzaCol2.className = "columns"
+   // Base options
    let pizzaBase = document.createElement("select")
    pizzaBase.className = "base"
+   pizzaBase.name = "base"
+   pizzaBase.id = "base"
+   let baseOp1 = document.createElement("option")
+   baseOp1.value = "1"
+   baseOp1.text = "[Select Base]"
+   let baseOp2 = document.createElement("option")
+   baseOp2.value = "2"
+   baseOp2.text = "Thin Italian"
+   let baseOp3 = document.createElement("option")
+   baseOp3.value = "3"
+   baseOp3.text = "Stone Crust"
+   let baseOp4 = document.createElement("option")
+   baseOp4.value = "4"
+   baseOp4.text = "Cheese Stuffed Crust"
+   let baseOp5 = document.createElement("option")
+   baseOp5.value = "5"
+   baseOp5.text = "Vegan"
+   let baseOp6 = document.createElement("option")
+   baseOp6.value = "6"
+   baseOp6.text = "Gluten Free"
+   pizzaBase.add(baseOp1,null)
+   pizzaBase.add(baseOp2,null)
+   pizzaBase.add(baseOp3,null)
+   pizzaBase.add(baseOp4,null)
+   pizzaBase.add(baseOp5,null)
+   pizzaBase.add(baseOp6,null)
    pizzaCol2.appendChild(pizzaBase)
+   // Size options
    let pizzaSize = document.createElement("select")
    pizzaSize.className = "size"
+   pizzaSize.name = "size"
+   pizzaSize.id = "size"
+   let SizeOp1 = document.createElement("option")
+   SizeOp1.value = "1"
+   SizeOp1.text = 'Small - 8"'
+   let SizeOp2 = document.createElement("option")
+   SizeOp2.value = "2"
+   SizeOp2.text = 'Medium - 12"'
+   SizeOp2.selected = true
+   let SizeOp3 = document.createElement("option")
+   SizeOp3.value = "3"
+   SizeOp3.text = 'Large - 16"'
+   let SizeOp4 = document.createElement("option")
+   SizeOp4.value = "4"
+   SizeOp4.text = 'Pizzanourmous - 20"'
+   pizzaSize.add(SizeOp1,null)
+   pizzaSize.add(SizeOp2,null)
+   pizzaSize.add(SizeOp3,null)
+   pizzaSize.add(SizeOp4,null)
    pizzaCol2.appendChild(pizzaSize)
    pizzaPanel.appendChild(pizzaCol2)
 
@@ -49,9 +96,18 @@ pizzaArray.forEach(function(pizzaItem, index){
    pizzaDesc.textContent = "Placeholder"
    pizzaPanel.appendChild(pizzaDesc)
    let pizzaQuantity = document.createElement("select")
+   pizzaQuantity.name = "quantity"
+   pizzaQuantity.id = "quantity"
+   for (let i = 1; i<=10; i++) {
+    let quantityOp = document.createElement("option")
+    quantityOp.value = i
+    quantityOp.text = i
+    pizzaQuantity.add(quantityOp,null)
+   }
    pizzaPanel.appendChild(pizzaQuantity)
    let pizzaButton = document.createElement("button")
    pizzaButton.textContent = "Add to Cart"
+   pizzaButton.dataset.order = pizzaItem
    pizzaPanel.appendChild(pizzaButton)
 
    // Attaches panel to section
