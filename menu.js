@@ -1,3 +1,7 @@
+// Getting json file
+import data from './items.json' assert {type: 'json'}
+console.log(data)
+
 // Setting constants for sections
 const pizzaSection = document.getElementById("pizza")
 const veganSection = document.getElementById("vegan")
@@ -5,11 +9,11 @@ const glutenSection = document.getElementById("glueten-free")
 const sidesSection = document.getElementById("sides")
 const drinksSection = document.getElementById("drinks")
 // Setting constant arrays for menu options
-const pizzaArray = ["original", "pepperoni", "meat", "chicken", "bbq", "spicy", "vegi", "spicy-vegi", "hawaiian", "tuna"]
-const veganArray = ["vegan-original", "vegan-pepperoni", "vegan-vegi"]
-const glutenArray = ["gf-original", "gf-pepperoni", "gf-vegi"]
-const sidesArray = ["garlic-bread", "cheesy-garlic-bread", "chicken-wings", "salad", "coleslaw"]
-const drinksArray = ["coke", "diet-coke", "dr-pepper", "fanta", "sprite"]
+const pizzaArray = data.pizzas//["original", "pepperoni", "meat", "chicken", "bbq", "spicy", "vegi", "spicy-vegi", "hawaiian", "tuna"]
+const veganArray = data.vegans//["vegan-original", "vegan-pepperoni", "vegan-vegi"]
+const glutenArray = data.gfree//["gf-original", "gf-pepperoni", "gf-vegi"]
+const sidesArray = data.sides//["garlic-bread", "cheesy-garlic-bread", "chicken-wings", "salad", "coleslaw"]
+const drinksArray = data.drinks//["coke", "diet-coke", "dr-pepper", "fanta", "sprite"]
 
 pizzaArray.forEach(function(pizzaItem, index){
 
@@ -24,11 +28,11 @@ pizzaArray.forEach(function(pizzaItem, index){
    pizzaCol1.className = "columns"
    let pizzaTitle = document.createElement("div")
    pizzaTitle.className = "title"
-   pizzaTitle.textContent = "Name"
+   pizzaTitle.textContent = pizzaArray[index].name
    pizzaCol1.appendChild(pizzaTitle)
    let pizzaPrice = document.createElement("div")
    pizzaPrice.className = "price"
-   pizzaPrice.textContent = "Price"
+   pizzaPrice.textContent = pizzaArray[index].price
    pizzaCol1.appendChild(pizzaPrice)
    pizzaPanel.appendChild(pizzaCol1)
 
@@ -93,7 +97,7 @@ pizzaArray.forEach(function(pizzaItem, index){
    // Description, Quantity, and Button
    let pizzaDesc = document.createElement("p")
    pizzaDesc.className = "desc"
-   pizzaDesc.textContent = "Placeholder"
+   pizzaDesc.textContent = pizzaArray[index].desc
    pizzaPanel.appendChild(pizzaDesc)
    let pizzaQuantity = document.createElement("select")
    pizzaQuantity.name = "quantity"
