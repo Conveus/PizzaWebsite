@@ -13,8 +13,7 @@ const drinkArray = data.drinks
 const basket = []
 let numItems = 0;
 
-window.addEventListener("DOMContentLoaded", function(e)
-{
+window.addEventListener("DOMContentLoaded", function(e) {
      // Setting constants for sections
      const pizzaSection = document.getElementById("pizza")
      const veganSection = document.getElementById("vegan")
@@ -23,22 +22,22 @@ window.addEventListener("DOMContentLoaded", function(e)
      const drinkSection = document.getElementById("drinks")
 
 
-     pizzaArray.forEach(function(pizzaItem, index){
+     pizzaArray.forEach(function(pizzaItem, index) {
           let pizzaOp = new PizzaMaker()
           pizzaOp.addPizza(pizzaSection, pizzaItem)
      })
 
-     veganArray.forEach(function(veganItem, index){
+     veganArray.forEach(function(veganItem, index) {
           let veganOp = new PizzaMaker()
           veganOp.addPizza(veganSection, veganItem)
      })
 
-     glutenArray.forEach(function(glutenItem, index){
+     glutenArray.forEach(function(glutenItem, index) {
           let glutenOp = new PizzaMaker()
           glutenOp.addPizza(glutenSection, glutenItem)
      })
 
-     sideArray.forEach(function(sideItem, index){
+     sideArray.forEach(function(sideItem, index) {
 
           // Creates item panel and image
           let itemPanel = document.createElement("div")
@@ -69,6 +68,7 @@ window.addEventListener("DOMContentLoaded", function(e)
           let itemQuantity = document.createElement("select")
           itemQuantity.name = "quantity"
           itemQuantity.id = "quantity"
+          itemQuantity.className = "quantity"
           for (let i = 1; i<=10; i++) {
                let quantityOp = document.createElement("option")
                quantityOp.value = i
@@ -109,32 +109,31 @@ window.addEventListener("DOMContentLoaded", function(e)
           itemCol1.appendChild(itemPrice)
           itemPanel.appendChild(itemCol1)
 
-               let itemQuantity = document.createElement("select")
-               itemQuantity.name = "quantity"
-               itemQuantity.id = "quantity"
-               for (let i = 1; i<=10; i++) {
-                    let quantityOp = document.createElement("option")
-                    quantityOp.value = i
-                    quantityOp.text = i
-                    itemQuantity.add(quantityOp,null)
-               }
-               itemPanel.appendChild(itemQuantity)
-               let itemButton = document.createElement("button")
-               itemButton.textContent = "Add to Cart"
-               itemButton.dataset.order = "side"
-               itemPanel.appendChild(itemButton)
+          let itemQuantity = document.createElement("select")
+          itemQuantity.name = "quantity"
+          itemQuantity.id = "quantity"
+          itemQuantity.className = "quantity"
+          for (let i = 1; i<=10; i++) {
+               let quantityOp = document.createElement("option")
+               quantityOp.value = i
+               quantityOp.text = i
+               itemQuantity.add(quantityOp,null)
+          }
+          itemPanel.appendChild(itemQuantity)
+          let itemButton = document.createElement("button")
+          itemButton.textContent = "Add to Cart"
+          itemButton.dataset.order = "side"
+          itemPanel.appendChild(itemButton)
           
-               // Attaches panel to section
-               drinkSection.appendChild(itemPanel)
+          // Attaches panel to section
+          drinkSection.appendChild(itemPanel)
      })
 
      // Create array of all item buttons
      const itemButtons = this.document.querySelectorAll("button[data-order]")
-     itemButtons.forEach(function(button)
-     {
+     itemButtons.forEach(function(button) {
           // When button is clicked
-          button.addEventListener("click", function(e)
-          {
+          button.addEventListener("click", function(e) {
                // Get buttons item
                const button = e.currentTarget
                const container = button.parentNode;
@@ -147,7 +146,7 @@ window.addEventListener("DOMContentLoaded", function(e)
                     base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
                     size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
                     desc: container.querySelector(".desc").innerText,
-                    //quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                    quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
                }
                // Increment numItems in basket
                numItems++
