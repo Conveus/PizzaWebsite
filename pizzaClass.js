@@ -1,13 +1,13 @@
 export class PizzaMaker{
     constructor(){}
 
-    addPizza(location, pizzaOb){
+    addPizza(location, pizzaOb) {
         // Creates item panel and image
         let itemPanel = document.createElement("div")
         itemPanel.className = "item"
         let itemImage = document.createElement("img")
         itemImage.src = pizzaOb.image
-        itemImage.alt = "Image"
+        itemImage.alt = pizzaOb.image
         itemPanel.appendChild(itemImage)
      
         // First column, Title and Price
@@ -31,7 +31,7 @@ export class PizzaMaker{
         pizzaBase.className = "base"
         pizzaBase.name = "base"
         pizzaBase.id = "base"
-        pizzaOb.bases.forEach(function(base, index){
+        pizzaOb.bases.forEach(function(base, index) {
              let baseOp = document.createElement("option")
              baseOp.value = index
              baseOp.text = base
@@ -43,7 +43,7 @@ export class PizzaMaker{
         pizzaSize.className = "size"
         pizzaSize.name = "size"
         pizzaSize.id = "size"
-        pizzaOb.sizes.forEach(function(size, index){
+        pizzaOb.sizes.forEach(function(size, index) {
              let sizeOp = document.createElement("option")
              sizeOp.value = index
              sizeOp.text = size
@@ -61,6 +61,7 @@ export class PizzaMaker{
         let itemQuantity = document.createElement("select")
         itemQuantity.name = "quantity"
         itemQuantity.id = "quantity"
+        itemQuantity.className = "quantity"
         for (let i = 1; i<=10; i++) {
              let quantityOp = document.createElement("option")
              quantityOp.value = i
