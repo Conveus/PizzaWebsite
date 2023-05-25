@@ -7,7 +7,7 @@ export class PizzaMaker{
         itemPanel.className = "item"
         let itemImage = document.createElement("img")
         itemImage.src = pizzaOb.image
-        itemImage.alt = "Image"
+        itemImage.alt = pizzaOb.image
         itemPanel.appendChild(itemImage)
      
         // First column, Title and Price

@@ -1,6 +1,6 @@
 // Getting json file
 import data from './items.json' assert {type: 'json'}
-import { PizzaMaker } from './pizzaClass.js' //assert {type: 'javascript'}
+import { PizzaMaker } from './pizzaClass.js'
 
 // Setting constant arrays for menu options
 const pizzaArray = data.pizzas
@@ -8,6 +8,8 @@ const veganArray = data.vegans
 const glutenArray = data.gfree
 const sideArray = data.sides
 const drinkArray = data.drinks
+
+console.log(pizzaArray)
 
 // Setting up basket
 const basket = []
@@ -44,7 +46,7 @@ window.addEventListener("DOMContentLoaded", function(e) {
           itemPanel.className = "item"
           let itemImage = document.createElement("img")
           itemImage.src = sideArray[index].image
-          itemImage.alt = "Image"
+          itemImage.alt = sideArray[index].image
           itemPanel.appendChild(itemImage)
 
           // First column, Title and Price
@@ -93,7 +95,7 @@ window.addEventListener("DOMContentLoaded", function(e) {
           itemPanel.className = "item"
           let itemImage = document.createElement("img")
           itemImage.src = drinkArray[index].image
-          itemImage.alt = "Image"
+          itemImage.alt = drinkArray[index].image
           itemPanel.appendChild(itemImage)
 
           // First column, Title and Price
@@ -136,23 +138,33 @@ window.addEventListener("DOMContentLoaded", function(e) {
           button.addEventListener("click", function(e) {
                // Get buttons item
                const button = e.currentTarget
-               const container = button.parentNode;
+               const container = button.parentNode
 
                // Add item info to basket
-               basket[numItems] = {
-                    itemImg: container.querySelector("img").src,
-                    title: container.querySelector(".title").innerText,
-                    price: container.querySelector(".price").innerText,
-                    base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
-                    size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
-                    desc: container.querySelector(".desc").innerText,
-                    quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+               if(container.querySelector(".base")) {
+                    basket[numItems] = 
+                    {
+                         imageSrc: container.querySelector("img").alt,
+                         title: container.querySelector(".title").innerText,
+                         price: container.querySelector(".price").innerText,
+                         base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
+                         size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                         quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                    }
+               } else {
+                    basket[numItems] = 
+                    {
+                         imageSrc: container.querySelector("img").alt,
+                         title: container.querySelector(".title").innerText,
+                         price: container.querySelector(".price").innerText,
+                         quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                    }
                }
+               
                // Increment numItems in basket
                numItems++
 
                console.log(basket)
-               console.log(numItems)
 
                localStorage.setItem("basket", JSON.stringify(basket))
           })
