@@ -2,112 +2,165 @@
     "pizzas": [
         {
             "name": "Cheese Pizza",
+            "image": "images/pizza/pizza.webp",
             "price": "£12.00",
-            "desc": "Sometimes simple is best"
+            "desc": "Sometimes simple is best",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Pepperoni Pizza",
+            "image": "images/pizza/pepperoni.webp",
             "price": "£12.00",
-            "desc": "A classic"
+            "desc": "A classic",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Meaty Pizza",
+            "image": "images/pizza/meat.webp",
             "price": "£12.00",
-            "desc": "Now with even more meat!"
+            "desc": "Now with even more meat!",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Chicken Pizza",
+            "image": "images/pizza/chicken.webp",
             "price": "£12.00",
-            "desc": "Fresh from the farm"
+            "desc": "Fresh from the farm",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "BBQ Pizza",
+            "image": "images/pizza/bbq.webp",
             "price": "£12.00",
-            "desc": "With that smoky flavour"
+            "desc": "With that smoky flavour",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Spicy Pizza",
+            "image": "images/pizza/spicy.webp",
             "price": "£12.00",
-            "desc": "For those who like it hot"
+            "desc": "For those who like it hot",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Veggie Pizza",
+            "image": "images/pizza/vegi.webp",
             "price": "£12.00",
-            "desc": "Remember to eat your greens"
+            "desc": "Remember to eat your greens",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Spicy Veggie Pizza",
+            "image": "images/pizza/spicy-vegi.webp",
             "price": "£12.00",
-            "desc": "Red hot greens"
+            "desc": "Red hot greens",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Hawaiian Pizza",
+            "image": "images/pizza/hawaiian.webp",
             "price": "£12.00",
-            "desc": "Love it or hate it"
+            "desc": "Love it or hate it",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Tuna Pizza",
+            "image": "images/pizza/tuna.webp",
             "price": "£12.00",
-            "desc": "This ones a catch!"
+            "desc": "This ones a catch!",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         }
     ],
     "vegans": [
         {
             "name": "Vegan Cheese Pizza",
+            "image": "images/pizza/pizza.webp",
             "price": "£12.00",
-            "desc": "Cheesey, or is it?"
+            "desc": "Cheesey, or is it?",
+            "bases": ["Vegan"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Vegan Pepperoni Pizza",
+            "image": "images/pizza/pepperoni.webp",
             "price": "£12.00",
-            "desc": "More pepper, less roni"
+            "desc": "More pepper, less roni",
+            "bases": ["Vegan"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Vegan Veggie Pizza",
+            "image": "images/pizza/vegi.webp",
             "price": "£12.00",
-            "desc": "100% Plant!"
+            "desc": "100% Plant!",
+            "bases": ["Vegan"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         }
     ],
     "gfree": [
         {
             "name": "Gluten-Free Cheese Pizza",
+            "image": "images/pizza/pizza.webp",
             "price": "£12.00",
-            "desc": "Even simpler"
+            "desc": "Even simpler",
+            "bases": ["Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Gluten-Free Pepperoni Pizza",
+            "image": "images/pizza/pepperoni.webp",
             "price": "£12.00",
-            "desc": "Sometimes simple is best"
+            "desc": "Sometimes simple is best",
+            "bases": ["Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         },
         {
             "name": "Gluten-Free Veggie Pizza",
+            "image": "images/pizza/vegi.webp",
             "price": "£12.00",
-            "desc": "No to some plants, yes to others"
+            "desc": "No to some plants, yes to others",
+            "bases": ["Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""]
         }
     ],
     "sides": [
         {
             "name": "Garlic Bread",
+            "image": "images/sides/garlic-bread.jpg",
             "price": "£12.00",
             "desc": "Can you really have pizza without it?"
         },
         {
             "name": "Cheesy Garlic Bread",
+            "image": "images/sides/cheesy-garlic-bread.jpg",
             "price": "£12.00",
             "desc": "It's like a second smaller pizza!"
         },
         {
             "name": "Chicken Wings",
+            "image": "images/sides/chicken-wings.webp",
             "price": "£12.00",
             "desc": "Ain't no thang"
         },
         {
             "name": "Salad",
+            "image": "images/sides/salad.jpg",
             "price": "£12.00",
             "desc": "Health food"
         },
         {
             "name": "Coleslaw",
+            "image": "images/sides/coleslaw.webp",
             "price": "£12.00",
             "desc": "Almost a salad"
         }
@@ -115,22 +168,27 @@
     "drinks": [
         {
             "name": "Coke",
+            "image": "images/drinks/coke.webp",
             "price": "£12.00"
         },
         {
             "name": "Diet-Coke",
+            "image": "images/drinks/diet-coke.webp",
             "price": "£12.00"
         },
         {
             "name": "Dr Pepper",
+            "image": "images/drinks/dr-pepper.webp",
             "price": "£12.00"
         },
         {
             "name": "Fanta",
+            "image": "images/drinks/fanta.webp",
             "price": "£12.00"
         },
         {
             "name": "Sprite",
+            "image": "images/drinks/sprite.webp",
             "price": "£12.00"
         }
     ]
