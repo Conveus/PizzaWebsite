@@ -17,29 +17,29 @@ const drinkArray = data.drinks
 pizzaArray.forEach(function(pizzaItem, index){
 
     // Creates item panel and image
-   let pizzaPanel = document.createElement("div")
-   pizzaPanel.className = "item"
-   let pizzaImage = document.createElement("img")
-   pizzaImage.src = pizzaArray[index].image
-   pizzaImage.alt = "Image"
-   pizzaPanel.appendChild(pizzaImage)
+   let itemPanel = document.createElement("div")
+   itemPanel.className = "item"
+   let itemImage = document.createElement("img")
+   itemImage.src = pizzaArray[index].image
+   itemImage.alt = "Image"
+   itemPanel.appendChild(itemImage)
 
    // First column, Title and Price
-   let pizzaCol1 = document.createElement("div")
-   pizzaCol1.className = "columns"
-   let pizzaTitle = document.createElement("div")
-   pizzaTitle.className = "title"
-   pizzaTitle.textContent = pizzaArray[index].name
-   pizzaCol1.appendChild(pizzaTitle)
-   let pizzaPrice = document.createElement("div")
-   pizzaPrice.className = "price"
-   pizzaPrice.textContent = pizzaArray[index].price
-   pizzaCol1.appendChild(pizzaPrice)
-   pizzaPanel.appendChild(pizzaCol1)
+   let itemCol1 = document.createElement("div")
+   itemCol1.className = "columns"
+   let itemTitle = document.createElement("div")
+   itemTitle.className = "title"
+   itemTitle.textContent = pizzaArray[index].name
+   itemCol1.appendChild(itemTitle)
+   let itemPrice = document.createElement("div")
+   itemPrice.className = "price"
+   itemPrice.textContent = pizzaArray[index].price
+   itemCol1.appendChild(itemPrice)
+   itemPanel.appendChild(itemCol1)
 
    // Second column
-   let pizzaCol2 = document.createElement("div")
-   pizzaCol2.className = "columns"
+   let itemCol2 = document.createElement("div")
+   itemCol2.className = "columns"
    // Base options
    let pizzaBase = document.createElement("select")
    pizzaBase.className = "base"
@@ -51,7 +51,7 @@ pizzaArray.forEach(function(pizzaItem, index){
         baseOp.text = base
         pizzaBase.add(baseOp)
    })
-   pizzaCol2.appendChild(pizzaBase)
+   itemCol2.appendChild(pizzaBase)
    // Size options
    let pizzaSize = document.createElement("select")
    pizzaSize.className = "size"
@@ -64,31 +64,31 @@ pizzaArray.forEach(function(pizzaItem, index){
         if(index==1){sizeOp.selected=true}
         pizzaSize.add(sizeOp)
     })
-   pizzaCol2.appendChild(pizzaSize)
-   pizzaPanel.appendChild(pizzaCol2)
+   itemCol2.appendChild(pizzaSize)
+   itemPanel.appendChild(itemCol2)
 
    // Description, Quantity, and Button
-   let pizzaDesc = document.createElement("p")
-   pizzaDesc.className = "desc"
-   pizzaDesc.textContent = pizzaArray[index].desc
-   pizzaPanel.appendChild(pizzaDesc)
-   let pizzaQuantity = document.createElement("select")
-   pizzaQuantity.name = "quantity"
-   pizzaQuantity.id = "quantity"
+   let itemDesc = document.createElement("p")
+   itemDesc.className = "desc"
+   itemDesc.textContent = pizzaArray[index].desc
+   itemPanel.appendChild(itemDesc)
+   let itemQuantity = document.createElement("select")
+   itemQuantity.name = "quantity"
+   itemQuantity.id = "quantity"
    for (let i = 1; i<=10; i++) {
         let quantityOp = document.createElement("option")
         quantityOp.value = i
         quantityOp.text = i
-        pizzaQuantity.add(quantityOp,null)
+        itemQuantity.add(quantityOp,null)
    }
-   pizzaPanel.appendChild(pizzaQuantity)
-   let pizzaButton = document.createElement("button")
-   pizzaButton.textContent = "Add to Cart"
-   pizzaButton.dataset.order = "pizza"
-   pizzaPanel.appendChild(pizzaButton)
+   itemPanel.appendChild(itemQuantity)
+   let itemButton = document.createElement("button")
+   itemButton.textContent = "Add to Cart"
+   itemButton.dataset.order = "pizza"
+   itemPanel.appendChild(itemButton)
 
    // Attaches panel to section
-   pizzaSection.appendChild(pizzaPanel)
+   pizzaSection.appendChild(itemPanel)
    
 })
 
@@ -103,50 +103,87 @@ glutenArray.forEach(function(glutenItem, index){
 sideArray.forEach(function(sideItem, index){
 
    // Creates item panel and image
-   let pizzaPanel = document.createElement("div")
-   pizzaPanel.className = "item"
-   let pizzaImage = document.createElement("img")
-   pizzaImage.src = sideArray[index].image
-   pizzaPanel.appendChild(pizzaImage)
+   let itemPanel = document.createElement("div")
+   itemPanel.className = "item"
+   let itemImage = document.createElement("img")
+   itemImage.src = sideArray[index].image
+   itemPanel.appendChild(itemImage)
 
    // First column, Title and Price
-   let pizzaCol1 = document.createElement("div")
-   pizzaCol1.className = "columns"
-   let pizzaTitle = document.createElement("div")
-   pizzaTitle.className = "title"
-   pizzaTitle.textContent = sideArray[index].name
-   pizzaCol1.appendChild(pizzaTitle)
-   let pizzaPrice = document.createElement("div")
-   pizzaPrice.className = "price"
-   pizzaPrice.textContent = sideArray[index].price
-   pizzaCol1.appendChild(pizzaPrice)
-   pizzaPanel.appendChild(pizzaCol1)
+   let itemCol1 = document.createElement("div")
+   itemCol1.className = "columns"
+   let itemTitle = document.createElement("div")
+   itemTitle.className = "title"
+   itemTitle.textContent = sideArray[index].name
+   itemCol1.appendChild(itemTitle)
+   let itemPrice = document.createElement("div")
+   itemPrice.className = "price"
+   itemPrice.textContent = sideArray[index].price
+   itemCol1.appendChild(itemPrice)
+   itemPanel.appendChild(itemCol1)
 
    // Description, Quantity, and Button
-   let pizzaDesc = document.createElement("p")
-   pizzaDesc.className = "desc"
-   pizzaDesc.textContent = sideArray[index].desc
-   pizzaPanel.appendChild(pizzaDesc)
-   let pizzaQuantity = document.createElement("select")
-   pizzaQuantity.name = "quantity"
-   pizzaQuantity.id = "quantity"
+   let itemDesc = document.createElement("p")
+   itemDesc.className = "desc"
+   itemDesc.textContent = sideArray[index].desc
+   itemPanel.appendChild(itemDesc)
+   let itemQuantity = document.createElement("select")
+   itemQuantity.name = "quantity"
+   itemQuantity.id = "quantity"
    for (let i = 1; i<=10; i++) {
         let quantityOp = document.createElement("option")
         quantityOp.value = i
         quantityOp.text = i
-        pizzaQuantity.add(quantityOp,null)
+        itemQuantity.add(quantityOp,null)
    }
-   pizzaPanel.appendChild(pizzaQuantity)
-   let pizzaButton = document.createElement("button")
-   pizzaButton.textContent = "Add to Cart"
-   pizzaButton.dataset.order = "side"
-   pizzaPanel.appendChild(pizzaButton)
+   itemPanel.appendChild(itemQuantity)
+   let itemButton = document.createElement("button")
+   itemButton.textContent = "Add to Cart"
+   itemButton.dataset.order = "side"
+   itemPanel.appendChild(itemButton)
 
    // Attaches panel to section
-   sideSection.appendChild(pizzaPanel)
+   sideSection.appendChild(itemPanel)
 
 })
 
 drinkArray.forEach(function(drinkItem, index){
-    
+
+     // Creates item panel and image
+   let itemPanel = document.createElement("div")
+   itemPanel.className = "item"
+   let itemImage = document.createElement("img")
+   itemImage.src = drinkArray[index].image
+   itemPanel.appendChild(itemImage)
+
+   // First column, Title and Price
+   let itemCol1 = document.createElement("div")
+   itemCol1.className = "columns"
+   let itemTitle = document.createElement("div")
+   itemTitle.className = "title"
+   itemTitle.textContent = drinkArray[index].name
+   itemCol1.appendChild(itemTitle)
+   let itemPrice = document.createElement("div")
+   itemPrice.className = "price"
+   itemPrice.textContent = drinkArray[index].price
+   itemCol1.appendChild(itemPrice)
+   itemPanel.appendChild(itemCol1)
+
+     let itemQuantity = document.createElement("select")
+     itemQuantity.name = "quantity"
+     itemQuantity.id = "quantity"
+     for (let i = 1; i<=10; i++) {
+          let quantityOp = document.createElement("option")
+          quantityOp.value = i
+          quantityOp.text = i
+          itemQuantity.add(quantityOp,null)
+     }
+     itemPanel.appendChild(itemQuantity)
+     let itemButton = document.createElement("button")
+     itemButton.textContent = "Add to Cart"
+     itemButton.dataset.order = "side"
+     itemPanel.appendChild(itemButton)
+  
+     // Attaches panel to section
+     drinkSection.appendChild(itemPanel)
 })
