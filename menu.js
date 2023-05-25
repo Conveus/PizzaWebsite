@@ -140,7 +140,7 @@ window.addEventListener("DOMContentLoaded", function(e) {
 
                // Add item info to basket
                basket[numItems] = {
-                    id: button.getAttribute("data-order"),
+                    itemImg: container.querySelector("img").src,
                     title: container.querySelector(".title").innerText,
                     price: container.querySelector(".price").innerText,
                     base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
