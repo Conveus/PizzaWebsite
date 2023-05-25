@@ -107,6 +107,7 @@ sideArray.forEach(function(sideItem, index){
    itemPanel.className = "item"
    let itemImage = document.createElement("img")
    itemImage.src = sideArray[index].image
+   itemImage.alt = "Image"
    itemPanel.appendChild(itemImage)
 
    // First column, Title and Price
@@ -154,6 +155,7 @@ drinkArray.forEach(function(drinkItem, index){
    itemPanel.className = "item"
    let itemImage = document.createElement("img")
    itemImage.src = drinkArray[index].image
+   itemImage.alt = "Image"
    itemPanel.appendChild(itemImage)
 
    // First column, Title and Price
