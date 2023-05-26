@@ -1,6 +1,7 @@
 // Getting json file
 import data from './items.json' assert {type: 'json'}
 import { PizzaMaker } from './pizzaClass.js'
+import { BasketAdder } from './basketClass.js'
 
 // Setting constant arrays for menu options
 const pizzaArray = data.pizzas
@@ -155,50 +156,13 @@ window.addEventListener("DOMContentLoaded", function(e) {
                let nullVal = null
                // Add item info to basket
                if(basket.length != 0) {
-                    if(container.querySelector(".base")) {
-                    basket[basket.length] = 
-                    {
-                         imageSrc: container.querySelector("img").alt,
-                         title: container.querySelector(".title").innerText,
-                         price: container.querySelector(".price").innerText,
-                         base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
-                         size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
-                         quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
-                    }
-                    } else {
-                         basket[basket.length] = 
-                         {
-                              imageSrc: container.querySelector("img").alt,
-                              title: container.querySelector(".title").innerText,
-                              price: container.querySelector(".price").innerText,
-                              quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
-                         }
-                    }
-
+                    let ba = new BasketAdder()
+                    ba.addItem(basket, basket.length, container)
                } else {
-                    if(container.querySelector(".base")) {
-                              basket[numItems] = 
-                              {
-                                   imageSrc: container.querySelector("img").alt,
-                                   title: container.querySelector(".title").innerText,
-                                   price: container.querySelector(".price").innerText,
-                                   base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
-                                   size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
-                                   quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
-                              }
-                         } else {
-                              basket[numItems] = 
-                              {
-                                   imageSrc: container.querySelector("img").alt,
-                                   title: container.querySelector(".title").innerText,
-                                   price: container.querySelector(".price").innerText,
-                                   quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
-                              }
-                         }
+                    let ba = new BasketAdder()
+                    ba.addItem(basket, numItems, container)
                }
 
-               
-               
                // Increment numItems in basket
                numItems++
 

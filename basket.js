@@ -46,6 +46,21 @@ window.addEventListener("DOMContentLoaded", function(e) {
                     orderSize.textContent = "Size: " + orderItem.size
                     orderCol2.appendChild(orderSize)
                     orderPanel.appendChild(orderCol2)
+
+                    if(orderItem.topping1) {
+                        // Third column
+                        let orderCol3 = document.createElement("div")
+                        orderCol3.className = "columns"
+                        let orderTop1 = document.createElement("div")
+                        orderTop1.className = "topping1"
+                        orderTop1.textContent = "Topping 1: " + orderItem.topping1
+                        orderCol3.appendChild(orderTop1)
+                        let orderTop2 = document.createElement("div")
+                        orderTop2.className = "topping2"
+                        orderTop2.textContent = "Topping 2: " + orderItem.topping2
+                        orderCol3.appendChild(orderTop2)
+                        orderPanel.appendChild(orderCol3)
+                    }
                 }
 
                 let orderQuantity = document.createElement("div")
