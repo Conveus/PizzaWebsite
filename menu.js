@@ -27,7 +27,6 @@ window.addEventListener("DOMContentLoaded", function(e) {
      const sideSection = document.getElementById("sides")
      const drinkSection = document.getElementById("drinks")
 
-
      pizzaArray.forEach(function(pizzaItem, index) {
           let pizzaOp = new PizzaMaker()
           pizzaOp.addPizza(pizzaSection, pizzaItem)

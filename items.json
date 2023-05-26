@@ -1,5 +1,27 @@
 {
+    "custom": [
+        {
+            "name": "50/50 Pizza",
+            "image": "images/pizza/pizza.webp",
+            "price": "£12.00",
+            "desc": "Perfect for sharing!",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""],
+            "topping1": ["Plain", "Pepperoni", "Meaty", "Chicken", "BBQ", "Spicy", "Veggie", "Spicy Veggie", "Hawaiian", "Tuna"],
+            "topping2": ["Plain", "Pepperoni", "Meaty", "Chicken", "BBQ", "Spicy", "Veggie", "Spicy Veggie", "Hawaiian", "Tuna"]
+        }
+    ],
     "pizzas": [
+        {
+            "name": "50/50 Pizza",
+            "image": "images/pizza/pizza.webp",
+            "price": "£12.00",
+            "desc": "Perfect for sharing!",
+            "bases": ["Thin Italian", "Stone Crust", "Cheese Stuffed", "Vegan", "Gluten-Free"],
+            "sizes": ["Small 8\"", "Medium 12\"","Large 16\"","Pizzanormous 20\""],
+            "topping1": ["Plain", "Pepperoni", "Meaty", "Chicken", "BBQ", "Spicy", "Veggie", "Spicy Veggie", "Hawaiian", "Tuna"],
+            "topping2": ["Plain", "Pepperoni", "Meaty", "Chicken", "BBQ", "Spicy", "Veggie", "Spicy Veggie", "Hawaiian", "Tuna"]
+        },
         {
             "name": "Cheese Pizza",
             "image": "images/pizza/pizza.webp",
