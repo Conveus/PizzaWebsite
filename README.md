@@ -8,3 +8,4 @@ Problems:
 - CSS is not effecting the item panels properly. There is supposed to be space between the quanitiy selector and button.
   Additionally the non-pizza items scale differently with the page than the pizza ones
 - Couldn't figure out how to get only three items to display next to each other before going down a line
+- Price does not change with size or quantity, I could probably do it I just ran out of time
