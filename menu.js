@@ -9,13 +9,17 @@ const glutenArray = data.gfree
 const sideArray = data.sides
 const drinkArray = data.drinks
 
-console.log(pizzaArray)
-
 // Setting up basket
 const basket = []
+
 let numItems = 0;
+//var basketObj = document.getElementsByClassName("basketBtn")
+//var basketText = "textContent" in basketObj.childNodes[0] ? "textContent" : "innerText"
+//console.log(basketText)
+
 
 window.addEventListener("DOMContentLoaded", function(e) {
+
      // Setting constants for sections
      const pizzaSection = document.getElementById("pizza")
      const veganSection = document.getElementById("vegan")
@@ -136,13 +140,24 @@ window.addEventListener("DOMContentLoaded", function(e) {
      itemButtons.forEach(function(button) {
           // When button is clicked
           button.addEventListener("click", function(e) {
+
+               // Check for saved basket
+               try {
+                    basket = JSON.parse(window.localStorage.getItem("basket"))
+                    console.log("Got basket")
+               } catch (error) {
+                    console.log("failed")
+               }
+
                // Get buttons item
                const button = e.currentTarget
                const container = button.parentNode
 
+               let nullVal = null
                // Add item info to basket
-               if(container.querySelector(".base")) {
-                    basket[numItems] = 
+               if(basket.length != 0) {
+                    if(container.querySelector(".base")) {
+                    basket[basket.length] = 
                     {
                          imageSrc: container.querySelector("img").alt,
                          title: container.querySelector(".title").innerText,
@@ -151,21 +166,46 @@ window.addEventListener("DOMContentLoaded", function(e) {
                          size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
                          quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
                     }
-               } else {
-                    basket[numItems] = 
-                    {
-                         imageSrc: container.querySelector("img").alt,
-                         title: container.querySelector(".title").innerText,
-                         price: container.querySelector(".price").innerText,
-                         quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                    } else {
+                         basket[basket.length] = 
+                         {
+                              imageSrc: container.querySelector("img").alt,
+                              title: container.querySelector(".title").innerText,
+                              price: container.querySelector(".price").innerText,
+                              quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                         }
                     }
+
+               } else {
+                    if(container.querySelector(".base")) {
+                              basket[numItems] = 
+                              {
+                                   imageSrc: container.querySelector("img").alt,
+                                   title: container.querySelector(".title").innerText,
+                                   price: container.querySelector(".price").innerText,
+                                   base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
+                                   size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                                   quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                              }
+                         } else {
+                              basket[numItems] = 
+                              {
+                                   imageSrc: container.querySelector("img").alt,
+                                   title: container.querySelector(".title").innerText,
+                                   price: container.querySelector(".price").innerText,
+                                   quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                              }
+                         }
                }
+
+               
                
                // Increment numItems in basket
                numItems++
 
-               console.log(basket)
+               //basketObj.textContent = "Basket (" + numItems +")"
 
+               localStorage.setItem("numItems", numItems)
                localStorage.setItem("basket", JSON.stringify(basket))
           })
      })
