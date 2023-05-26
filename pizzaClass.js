@@ -38,6 +38,7 @@ export class PizzaMaker{
              pizzaBase.add(baseOp)
         })
         itemCol2.appendChild(pizzaBase)
+
         // Size options
         let pizzaSize = document.createElement("select")
         pizzaSize.className = "size"
@@ -53,6 +54,35 @@ export class PizzaMaker{
         itemCol2.appendChild(pizzaSize)
         itemPanel.appendChild(itemCol2)
      
+        if(pizzaOb.topping1) {
+            // Third column
+            let itemCol3 = document.createElement("div")
+            itemCol3.className = "columns"
+            let pizzaTop1 = document.createElement("select")
+            pizzaTop1.className = "topping1"
+            pizzaTop1.name = "topping1"
+            pizzaTop1.id = "topping1"
+            pizzaOb.topping1.forEach(function(top, index) {
+                let topOp = document.createElement("option")
+                topOp.value = index
+                topOp.text = top
+                pizzaTop1.add(topOp)
+           })
+           itemCol3.appendChild(pizzaTop1)
+           let pizzaTop2 = document.createElement("select")
+            pizzaTop2.className = "topping2"
+            pizzaTop2.name = "topping2"
+            pizzaTop2.id = "topping2"
+            pizzaOb.topping2.forEach(function(top, index) {
+                let topOp = document.createElement("option")
+                topOp.value = index
+                topOp.text = top
+                pizzaTop2.add(topOp)
+           })
+           itemCol3.appendChild(pizzaTop2)
+           itemPanel.appendChild(itemCol3)
+        }
+
         // Description, Quantity, and Button
         let itemDesc = document.createElement("p")
         itemDesc.className = "desc"
