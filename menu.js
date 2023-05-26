@@ -156,15 +156,27 @@ window.addEventListener("DOMContentLoaded", function(e) {
                // Add item info to basket
                if(basket.length != 0) {
                     if(container.querySelector(".base")) {
-                    basket[basket.length] = 
-                    {
-                         imageSrc: container.querySelector("img").alt,
-                         title: container.querySelector(".title").innerText,
-                         price: container.querySelector(".price").innerText,
-                         base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
-                         size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
-                         quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
-                    }
+                         basket[basket.length] = 
+                         {
+                              imageSrc: container.querySelector("img").alt,
+                              title: container.querySelector(".title").innerText,
+                              price: container.querySelector(".price").innerText,
+                              base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
+                              size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                              quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                         }
+                    } else if (container.querySelector(".topping1")) {
+                         basket[basket.length] = 
+                         {
+                              imageSrc: container.querySelector("img").alt,
+                              title: container.querySelector(".title").innerText,
+                              price: container.querySelector(".price").innerText,
+                              base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
+                              size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                              topping1: container.querySelector(".topping1").options[container.querySelector(".topping1").selectedIndex].text,
+                              topping2: container.querySelector(".topping2").options[container.querySelector(".topping2").selectedIndex].text,
+                              quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                         }
                     } else {
                          basket[basket.length] = 
                          {
@@ -184,6 +196,18 @@ window.addEventListener("DOMContentLoaded", function(e) {
                                    price: container.querySelector(".price").innerText,
                                    base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
                                    size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                                   quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
+                              }
+                         } else if (container.querySelector(".topping1")) {
+                              basket[numItems] =
+                              {
+                                   imageSrc: container.querySelector("img").alt,
+                                   title: container.querySelector(".title").innerText,
+                                   price: container.querySelector(".price").innerText,
+                                   base: container.querySelector(".base").options[container.querySelector(".base").selectedIndex].text,
+                                   size: container.querySelector(".size").options[container.querySelector(".size").selectedIndex].text,
+                                   topping1: container.querySelector(".topping1").options[container.querySelector(".topping1").selectedIndex].text,
+                                   topping2: container.querySelector(".topping2").options[container.querySelector(".topping2").selectedIndex].text,
                                    quantity: container.querySelector(".quantity").options[container.querySelector(".quantity").selectedIndex].text,
                               }
                          } else {
